@@ -1,2 +1,2 @@
-https://github.com/THETOUCH/rsschool-cv/cv
-https://github.com/THETOUCH/rsschool-cv
+[Markdown CV](https://thetouch.github.io/rsschool-cv/cv.md)
+[Formatted CV](https://thetouch.github.io/rsschool-cv/)
