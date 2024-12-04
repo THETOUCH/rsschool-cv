@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My CV</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <div class="header-content">
+                <div class="section-left">
+                    <img src="avatar.jpg" alt="Avatar" class="avatar">
+                </div>
+            
+                <div class="section-right">
+                    <h1><span class="name-color">Vladimir</span> Dronov</h1>
+                    <span class="under__name__desc">Beginner in Java Web Development</span>
+                </div>
+        
+            </div>
+            
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#education">Education</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+        <main class="content">
+            <section id="about" class="section">
+                <div class="section-left">
+                    <h2>About me a few words</h2>
+                </div>
+                <div class="section-right">
+                    <p>I have good interpersonal skills, am an excellent team worker and very willing to learn and develop new skills.</p>
+                    <p>I am reliable and dependable and often seek new responsibilities within a wide range of employment areas.</p>
+                </div>
+            </section>
+
+            <section id="skills" class="section alternate">
+                <div class="section-left">
+                    <h2>Skills</h2>
+                </div>
+                <div class="section-right">
+                    <ul>
+                        <li>Solid knowledge of Java Core and skills in Java Multithreading</li>
+                        <li>Proficiency in Java Web technologies (Front-End: HTML, CSS, JavaScript; Back-End: Servlets)</li>
+                        <li>Expertise in database development using SQL Standard and JDBC API</li>
+                        <li>Competency in Spring Core and Spring MVC</li>
+                        <li>Familiarity with design patterns</li>
+                        <li>Experience with unit testing</li>
+                    </ul>
+                </div>
+            </section>
+
+
+            <section id="projects" class="section">
+                <div class="section-left">
+                    <h2>Projects code</h2>
+                </div>
+        
+                <div class="section-right">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/THETOUCH/stage3-module1-task">Stage 3 Module 1 Task</a> - Example of a console application from the main module of a Java MVC console application emulation.
+                            <pre>
+                <code>
+                int operation = 0;
+                Scanner scanner = new Scanner(System.in);
+                
+                AuthorData authorDataSource = new AuthorData();
+                NewsData newsDataSource = new NewsData(authorDataSource);
+                DataSourceImpl dataSource = new DataSourceImpl(authorDataSource, newsDataSource);
+                
+                NewsService newsService = new NewsServiceImpl(dataSource, Validator.getInstance());
+                Controller controller = new Controller(newsService);
+                
+                do {
+                    System.out.println("Choose operation:\n1. Get all news\n2. Get news by id\n3. Create news\n4. Update news\n5. Delete news\n0. Exit");
+                    operation = scanner.nextInt();
+                    switch (operation) {
+                        case 1 -> controller.getAllNews().forEach(System.out::println);
+                        case 2 -> {
+                            System.out.println("Enter new id:");
+                            System.out.println(controller.getNewsById(scanner.nextLong()));
+                        }
+                        case 0 -> {
+                            System.out.println("Goodbye!");
+                            scanner.close();
+                        }
+                    }
+                } while (operation != 0);
+                </code>
+                            </pre>
+                        </li>
+                    </ul>
+                </div>
+                
+            </section>
+
+            <section id="education" class="section alternate">
+                <div class="section-left">
+                    <h2>Education and English level</h2>
+                </div>
+               
+                <div class="section-right">
+                    <ul>
+                        <li>Kyrgyz-Russian Slavic University</li>
+                        <li>English proficiency: A2+</li>
+                    </ul>
+                </div>
+            </section>
+
+        </main>
+
+        <footer>
+            <div class="footer__up">
+                    <ul class="footer__links">
+
+                    <li class="footer__item">
+                        <a class="footer__link-github" href="https://github.com/THETOUCH">
+                            <img src="github-mark-white.svg" alt="GitHub Logo" width="30" height="30">
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link-rsschool" href="https://rs.school/js/">
+                            <img src="rs-school-logo.svg" alt="RS School Logo" width="90" height="30">
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link-telegram" href="https://t.me/thetouchtimes">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Telegram_2019_Logo.svg" alt="Telegram Logo" width="30" height="30">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__down">
+                <h6>Vladimir Dronov &copy; 2024</h6>
+            </div>
+        </footer>
+    </body>
+</html>
